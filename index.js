@@ -56,7 +56,7 @@ if(vc == "one")
 
 for(var i = verse1;i< verse2-verse1+2;i++){
   var xhr = new XMLHttpRequest();    
-xhr.open('GET','http://api.alquran.cloud/v1/ayah/' + i.toString()  + '/ar.alafasy',true)
+xhr.open('GET','https://api.alquran.cloud/v1/ayah/' + i.toString()  + '/ar.alafasy',true)
 xhr.onreadystatechange = function(){
   if(this.readyState == 4 && this.status == 200){
     var result = JSON.parse(this.response);
