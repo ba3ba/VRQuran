@@ -22,8 +22,7 @@ var toX = [7,293,493,669,789,954,1160,1235,1364,1473,1596,1707,1750,1802,1901,20
 var button = document.getElementById("but"); 
 
 //setting difference
-if(sessionStorage.getItem('repeat')){
-  console.log("repeat finished");
+
 
 var chap = document.createElement("input");
 chap.id = "chapter";
@@ -36,7 +35,7 @@ var doc1 = document.createElement("input");
 doc1.id = "verse1";
 document.body.appendChild(doc1);  
 var p2 = document.createElement("p");
-p1.innerHTML = "verse1"
+p2.innerHTML = "verse1"
 document.body.appendChild(p2);
 
 var doc2 = document.createElement("input");
@@ -51,7 +50,6 @@ document.body.appendChild(p3);
 var doc3 = document.createElement("input");
 doc3.id = "Repeat";
 document.body.appendChild(doc3);  
-document.body.appendChild(document.createElement("repeat:"));
 
 var p4 = document.createElement("p");
 p4.innerHTML = "repeat"
@@ -107,7 +105,7 @@ xhr.send();
 
 }
 
-}
+
 
 
 
