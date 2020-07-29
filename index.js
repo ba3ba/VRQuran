@@ -28,25 +28,34 @@ if(sessionStorage.getItem('repeat')){
 var chap = document.createElement("input");
 chap.id = "chapter";
 document.body.appendChild(chap);  
-document.body.appendChild(document.createElement("chapter:"));
+var p1 = document.createElement("p");
+p1.innerHTML = "chapter"
+document.body.appendChild(p1);
 
 var doc1 = document.createElement("input");
 doc1.id = "verse1";
 document.body.appendChild(doc1);  
-document.body.appendChild(document.createElement("verse1:"));
-
+var p2 = document.createElement("p");
+p1.innerHTML = "verse1"
+document.body.appendChild(p2);
 
 var doc2 = document.createElement("input");
 doc2.id = "verse2";
 document.body.appendChild(doc2);  
 document.body.appendChild(document.createElement("verse2:"));
 
+var p3 = document.createElement("p");
+p3.innerHTML = "verse2"
+document.body.appendChild(p3);
 
 var doc3 = document.createElement("input");
 doc3.id = "Repeat";
 document.body.appendChild(doc3);  
 document.body.appendChild(document.createElement("repeat:"));
 
+var p4 = document.createElement("p");
+p4.innerHTML = "repeat"
+document.body.appendChild(p4);
 
 var verse1 = document.getElementById("verse1");
 console.log(verse1);
