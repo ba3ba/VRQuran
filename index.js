@@ -3,31 +3,6 @@ var p = document.getElementById("p");
 
 
 //Aanyang get the three
-if(annyang){
-  var cmnd1 = {"chapter :chapter":function(chapter){
-    p.innerHTML = "chapter" + chapter;
-    sessionStorage.setItem("chapter",chapter);
-  }};
-  var cmnd2 = {"verse :verse":function(verse){
-    p.innerHTML = p.innerHTML + "verse " + verse;
-    sessionStorage.setItem("verse1",verse);
-  }};
-  var cmnd3 = {"on verse :verse2": function(verse2){
-    p.innerHTML = p.innerHTML + " to verse " + verse2;
-    sessionStorage.setItem("verse2",verse2);
-  }};
-
-  var cmnd4 = {"repeat :repeat" : function(repeat){
-    p.innerHTML = p.innerHTML + 'repeat ' + repeat + ' times';
-    sessionStorage.setItem('repeat',repeat);
-  }};
-
-  annyang.addCommands(cmnd1);
-  annyang.addCommands(cmnd2);
-  annyang.addCommands(cmnd3);
-  annyang.addCommands(cmnd4);
-  annyang.start();
-}
 
 
 
@@ -49,10 +24,35 @@ var button = document.getElementById("but");
 //setting difference
 if(sessionStorage.getItem('repeat')){
   console.log("repeat finished");
-var verse1 = sessionStorage.getItem("verse1");
-var verse2 = sessionStorage.getItem("verse2");
-var chapterNum = sessionStorage.getItem('chapter');
-var repeat = sessionStorage.getItem('repeat');
+
+var chap = document.createElement("input");
+chap.id = "chapter";
+document.body.appendChild(chap);  
+document.body.appendChild(document.createElement("chapter:"));
+
+var doc1 = document.createElement("input");
+doc1.id = "verse1";
+document.body.appendChild(doc1);  
+document.body.appendChild(document.createElement("verse1:"));
+
+
+var doc2 = document.createElement("input");
+doc2.id = "verse2";
+document.body.appendChild(doc2);  
+document.body.appendChild(document.createElement("verse2:"));
+
+
+var doc3 = document.createElement("input");
+doc3.id = "Repeat";
+document.body.appendChild(doc3);  
+document.body.appendChild(document.createElement("repeat:"));
+
+
+var verse1 = document.getElementById("verse1");
+console.log(verse1);
+var verse2 = document.getElementById("verse2");
+var chapterNum = document.getElementById("chapter");
+var repeat = document.getElementById("repeat");
 var temp =0;
 //var vc = sessionStorage.getItem("chapter");
 
@@ -103,7 +103,6 @@ xhr.send();
 
 
 document.getElementById("Play").addEventListener('click',function(){
-
   var y = 0;
   document.body.appendChild(document.createElement('audio'));
   var audio = document.getElementsByTagName('audio')[0];
