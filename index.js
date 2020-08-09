@@ -22,41 +22,42 @@ var toX = [7,293,493,669,789,954,1160,1235,1364,1473,1596,1707,1750,1802,1901,20
 var button = document.getElementById("but"); 
 
 //setting difference
-
-
-var chap = document.createElement("input");
-chap.id = "chapter";
-document.body.appendChild(chap);  
 var p1 = document.createElement("p");
 p1.innerHTML = "chapter"
 document.body.appendChild(p1);
 
-var doc1 = document.createElement("input");
-doc1.id = "verse1";
-document.body.appendChild(doc1);  
+var chap = document.createElement("input");
+chap.id = "chapter";
+document.body.appendChild(chap); 
+
 var p2 = document.createElement("p");
 p2.innerHTML = "verse1"
 document.body.appendChild(p2);
+
+var doc1 = document.createElement("input");
+doc1.id = "verse1";
+document.body.appendChild(doc1);  
+
+var p3 = document.createElement("p");
+p3.innerHTML = "verse2"
+document.body.appendChild(p3);
 
 var doc2 = document.createElement("input");
 doc2.id = "verse2";
 document.body.appendChild(doc2);  
 document.body.appendChild(document.createElement("verse2:"));
 
-var p3 = document.createElement("p");
-p3.innerHTML = "verse2"
-document.body.appendChild(p3);
+var p4 = document.createElement("p");
+p4.innerHTML = "repeat"
+document.body.appendChild(p4);
 
 var doc3 = document.createElement("input");
 doc3.id = "Repeat";
 document.body.appendChild(doc3);  
 
-var p4 = document.createElement("p");
-p4.innerHTML = "repeat"
-document.body.appendChild(p4);
+
 
 var verse1 = document.getElementById("verse1");
-console.log(verse1);
 var verse2 = document.getElementById("verse2");
 var chapterNum = document.getElementById("chapter");
 var repeat = document.getElementById("repeat");
@@ -72,8 +73,7 @@ var temp =0;
 
 
 
-
-
+document.getElementById("re").addEventListener("click", function(){
 for(var i = verse1;i < verse2-verse1+2;i++){
   var xhr = new XMLHttpRequest();   
   var g = i; 
@@ -105,11 +105,10 @@ xhr.send();
 
 }
 
+});
 
 
-
-
-document.getElementById("Play").addEventListener('click',function(){
+document.getElementById("Play").addEventListener("click",function(){
   var y = 0;
   document.body.appendChild(document.createElement('audio'));
   var audio = document.getElementsByTagName('audio')[0];
@@ -136,5 +135,4 @@ document.getElementById("Play").addEventListener('click',function(){
   }
 
   };
-
 });
