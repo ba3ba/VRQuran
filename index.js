@@ -74,6 +74,7 @@ var temp =0;
 
 
 document.getElementById("re").addEventListener("click", function(){
+  console.log("this");
 for(var i = verse1;i < verse2-verse1+2;i++){
   var xhr = new XMLHttpRequest();   
   var g = i; 
